@@ -1,0 +1,10 @@
+{
+  "name": "hacked",
+  "version": "0.1.0",
+  "description": "HACKED",
+  "main": "index.js",
+  "repository": "github.com/zvory/hacked",
+  "author": "Alex Zvorygin <grafetu@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
