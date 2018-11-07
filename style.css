@@ -1,9 +1,14 @@
 body {
     background: #111;
+    /* background: url("wind.gif"); */
+    background: url("static.gif");
+    /* background-size: 150%; */
     color: green;
-    font-family: "Courier";
+    text-shadow: 0 0 0.2em green;
+    /* font-family: 'VT323', monospace; */
+    font: 'Courier new', monospace;
     overflow:hidden;
-
+    scroll-behavior: smooth;
 }
 
 span {
@@ -12,4 +17,20 @@ span {
     left: 0; 
     overflow:hidden;
 }
-  
+
+
+
+span:hover{
+    color: red;
+    text-shadow: 0 0 0.2em red;
+    /* text-shadow: 0 0 0.2em green 0 0 0.2em green 0 0 0.2em green; */
+}
+
+.pre#code {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 50% !important;
+  }
