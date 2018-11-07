@@ -265,15 +265,15 @@ loopTransforms(listElements, transforms, transformDiffs)
 
 const scrollText = x => {
     const code = document.getElementById('code')
-    window.scroll({left: 0, top:x, behavior: 'smooth'})
+    window.scroll(0,x)
     if (x > 3000) {
         setTimeout(() => scrollText(0), 1)
     } else {
-        setTimeout(() => scrollText(x+6), 1)
+        setTimeout(() => scrollText(x+12), 1)
     }
         
     
 }
 
-scrollText(0)
+scrollText(5)
 
