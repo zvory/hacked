@@ -37,7 +37,7 @@ console.log(document.width)
 
 const createRandomTransforms = length => {
     return [...Array(length)].map( () => ({
-            ...createTranslation(Math.random() * document.documentElement.clientWidth*0.001, Math.random() * document.documentElement.clientHeight*0.87),
+            ...createTranslation(Math.random() * document.documentElement.clientWidth, Math.random() * document.documentElement.clientHeight),
             ...createRotation(Math.random()*360),
             ...createScale()
         }))
@@ -124,4 +124,5 @@ const loopTransforms = (elements, transforms, diffs) => {
     setTimeout(() => loopTransforms(elements, newTransforms, possiblyModifiedDiffs), 17)
 }
 
+// applyTransforms(listElements, transforms)
 loopTransforms(listElements, transforms, transformDiffs)

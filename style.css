@@ -2,5 +2,14 @@ body {
     background: #111;
     color: green;
     font-family: "Courier";
+    overflow:hidden;
+
 }
 
+span {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    overflow:hidden;
+}
+  
