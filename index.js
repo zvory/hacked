@@ -38,14 +38,14 @@ const textDictionary = [
     'sybil',
     'kernel',
     'phreaker',
-    'jammer', 
-    'nexus', 
+    'jammer',
+    'nexus',
     'interface',
-    'network', 
+    'network',
     'grep',
     'cyborg',
     'c++',
-    'assembly', 
+    'assembly',
     'anarchy',
     'blonkchain',
     'crash override'
@@ -263,17 +263,23 @@ const loopTransforms = (elements, transforms, diffs) => {
 // applyTransforms(listElements, transforms)
 loopTransforms(listElements, transforms, transformDiffs)
 
-const scrollText = x => {
-    const code = document.getElementById('code')
+const scrollText = (x, dir) => {
     window.scroll(0,x)
-    if (x > 3000) {
-        setTimeout(() => scrollText(0), 1)
-    } else {
-        setTimeout(() => scrollText(x+12), 1)
+    console.log(x, dir)
+    if (dir == 'down') {
+        if (x > 3000) {
+            setTimeout(() => scrollText(x-12, 'up'), 1)
+        } else {
+            setTimeout(() => scrollText(x+12, 'down'), 1)
+        }
+    } else if (dir == 'up') {
+        if (x < 0) {
+            setTimeout(() => scrollText(x+12, 'down'), 1)
+        } else {
+            setTimeout(() => scrollText(x-12, 'up'), 1)
+        }
     }
-        
-    
 }
 
-scrollText(5)
+scrollText(0, 'down')
 
