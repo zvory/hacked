@@ -268,15 +268,15 @@ const scrollText = (x, dir) => {
     console.log(x, dir)
     if (dir == 'down') {
         if (x > 3000) {
-            setTimeout(() => scrollText(x-12, 'up'), 1)
+            setTimeout(() => scrollText(x-6, 'up'), 7)
         } else {
-            setTimeout(() => scrollText(x+12, 'down'), 1)
+            setTimeout(() => scrollText(x+6, 'down'), 7)
         }
     } else if (dir == 'up') {
         if (x < 0) {
-            setTimeout(() => scrollText(x+12, 'down'), 1)
+            setTimeout(() => scrollText(x+6, 'down'), 7)
         } else {
-            setTimeout(() => scrollText(x-12, 'up'), 1)
+            setTimeout(() => scrollText(x-6, 'up'), 7)
         }
     }
 }
